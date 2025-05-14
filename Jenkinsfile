@@ -10,7 +10,7 @@ pipeline {
         SSH_KEY = credentials('ssh-key-ec2')
         DEV_IP = '3.92.207.25'
         QA_IP  = ' 3.226.209.26 '
-        PROD_IP = '18.209.58.92'
+        PROD_IP = '52.5.205.88'
         REMOTE_PATH = '/home/ubuntu/node-healthcheck'
     }
 
