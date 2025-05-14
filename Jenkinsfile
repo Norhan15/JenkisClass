@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Norhan15/JenkisClass.git'
+                git branch: 'QA', url: 'https://github.com/Norhan15/JenkisClass.git'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
                 sh """
                 ssh -i $SSH_KEY -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP '
                     cd $REMOTE_PATH &&
-                    git pull origin main &&
+                    git pull origin QA &&
                     npm ci &&
                     pm2 restart health-api || pm2 start server.js --name health-api
                 '
