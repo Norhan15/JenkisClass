@@ -4,7 +4,7 @@ pipeline {
     environment {
         NODE_ENV = 'production'
         EC2_USER = 'ubuntu'
-        EC2_IP = '54.85.49.110'
+        EC2_IP = '18.209.58.92'
         REMOTE_PATH = '/home/ubuntu/JenkisClass'
         SSH_KEY = credentials('ssh-key-ec2')
     }
